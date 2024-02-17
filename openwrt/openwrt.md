@@ -50,7 +50,6 @@ sudo apt install -y --fix-missing ack antlr3 asciidoc autoconf automake autopoin
   nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip python3-ply \
   python3-docutils python3-pyelftools qemu-utils re2c rsync scons squashfs-tools subversion swig \
   texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
-
 ```
 
 ``` sh
@@ -63,11 +62,26 @@ patch
 adguardhome
 ```
 
+```
+luci-theme-argone
+luci-theme-atmaterial_new
+luci-theme-design
+luci-theme-ifit
+luci-theme-opentopd
+luci-theme-tomato
+```
+
 # feeds
 
 ``` sh
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+
+sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
+
+https://github.com/kiddin9/openwrt-packages
+
+
 ```
 
 ``` sh
