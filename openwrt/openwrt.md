@@ -109,5 +109,21 @@ make V=s -j1
 make V=s -j4
 ```
 
+# ref
 
+https://github.com/openwrt/openwrt/tree/openwrt-23.05
+
+https://github.com/coolsnowwolf/lede
+
+https://github.com/Lienol/openwrt/tree/23.05
+
+https://github.com/immortalwrt/immortalwrt/tree/openwrt-23.05
+
+https://github.com/kenzok8/openwrt-packages
+
+https://github.com/kenzok8/small
+
+https://github.com/kenzok8/small-package
+
+https://github.com/kiddin9/openwrt-packages
 
