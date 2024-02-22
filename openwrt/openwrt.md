@@ -33,10 +33,13 @@ patch
 
 ```
 build_dir/target-x86_64_musl/linux-x86_64/linux-5.15.139/Makefile
+
+KBUILD_CFLAGS-$(CONFIG_WERROR) += -Werror
 ```
 
 ```
-shortcut-fe
+Shortcut-FE
+verysync
 ```
 
 ## immortalwrt
