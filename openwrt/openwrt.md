@@ -1,3 +1,15 @@
+- [prepare](#prepare)
+  - [lede](#lede)
+  - [lienol](#lienol)
+  - [immortalwrt](#immortalwrt)
+  - [common](#common)
+- [feeds](#feeds)
+- [confg](#confg)
+- [downlaod](#downlaod)
+- [make](#make)
+- [uboot](#uboot)
+- [ref](#ref)
+
 # prepare
 
 ## lede
@@ -18,10 +30,17 @@ uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 git clone https://github.com/coolsnowwolf/lede
 ```
 
+patch
+
+```
+-luci-app-fileassistant，和luci-app-advanced冲突
+-luci-app-homeproxy，依赖firewall4，和firewall冲突
+```
+
 ## lienol
 
 ``` sh
-sudo apt install -y build-essential asciidoc binutils bzip2 curl gawk gettext git libncurses5-dev libz-dev patch python3.10 python2.7 unzip zlib1g-dev lib32gcc-s1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf libfuse-dev
+sudo apt install -y build-essential asciidoc binutils bzip2 curl gawk gettext git libncurses5-dev libz-dev patch python3.10 python2.7 unzip zlib1g-dev lib32gcc-s1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf libfuse-dev libgsl-dev
 ```
 
 ``` sh
@@ -33,13 +52,11 @@ patch
 
 ```
 build_dir/target-x86_64_musl/linux-x86_64/linux-5.15.139/Makefile
-
 KBUILD_CFLAGS-$(CONFIG_WERROR) += -Werror
-```
 
-```
-Shortcut-FE
-verysync
+-luci-app-fileassistant，和luci-app-advanced冲突
+-Shortcut-FE，编译错误
+-verysync，版本太久，下载不到了
 ```
 
 ## immortalwrt
@@ -62,17 +79,13 @@ git clone git@github.com:immortalwrt/immortalwrt.git
 patch
 
 ```
-adguardhome
+-luci-app-fileassistant，和luci-app-advanced冲突
++SQUID_with-libcap SQUID_with-nettle SQUID_with-libxml2，squid依赖
+-luci-app-socat
+-luci-app-kcptun
 ```
 
-```
-luci-theme-argone
-luci-theme-atmaterial_new
-luci-theme-design
-luci-theme-ifit
-luci-theme-opentopd
-luci-theme-tomato
-```
+## common
 
 # feeds
 
@@ -81,10 +94,6 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
-
-https://github.com/kiddin9/openwrt-packages
-
-
 ```
 
 ``` sh
@@ -111,6 +120,24 @@ make download -j8
 make V=s -j1
 make V=s -j4
 ```
+
+# uboot
+
+ax3000t
+
+https://github.com/hanwckf/bl-mt798x
+
+https://cmi.hanwckf.top/p/mt798x-uboot-usage/
+
+SOC=mt7981 BOARD=ax3000t MULTI_LAYOUT=1 ./build.sh
+
+mt7981_ax3000t-fip-fixed-parts-multi-layout.bin
+
+https://forum.openwrt.org/t/openwrt-support-for-xiaomi-ax3000t/180490
+
+https://openwrt.org/inbox/toh/xiaomi/ax3000t
+
+https://github.com/openwrt/openwrt/pull/14054
 
 # ref
 
