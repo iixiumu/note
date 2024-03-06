@@ -34,23 +34,27 @@ patch
 
 ```
 -luci-app-fileassistant，和luci-app-advanced冲突
+-libustream-openssl
 -luci-app-homeproxy，依赖firewall4，和firewall冲突
 ```
 
 ## lienol
 
 ``` sh
-sudo apt install -y build-essential asciidoc binutils bzip2 curl gawk gettext git libncurses5-dev libz-dev patch python3.10 python2.7 unzip zlib1g-dev lib32gcc-s1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf libfuse-dev libgsl-dev
+sudo apt install -y build-essential asciidoc binutils bzip2 curl gawk gettext git libncurses5-dev libz-dev patch python3.10 python2.7 unzip zlib1g-dev lib32gcc-s1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf libfuse-dev libgsl-dev python3-pyelftools swig python3-dev
 ```
 
 ``` sh
 git clone git@github.com:Lienol/openwrt.git
-git checkout 23.05
 ```
 
 patch
 
 ```
+ls -lh build_dir/target-*_musl/linux-*/linux-*/Makefile
+build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_filogic/linux-5.15.150/Makefile
+build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/linux-5.15.150/Makefile
+build_dir/target-x86_64_musl/linux-x86_64/linux-6.1.78/Makefile
 build_dir/target-x86_64_musl/linux-x86_64/linux-5.15.139/Makefile
 KBUILD_CFLAGS-$(CONFIG_WERROR) += -Werror
 
@@ -80,9 +84,11 @@ patch
 
 ```
 -luci-app-fileassistant，和luci-app-advanced冲突
+-libustream-openssl
 +SQUID_with-libcap SQUID_with-nettle SQUID_with-libxml2，squid依赖
--luci-app-socat
 -luci-app-kcptun
+-luci-app-mosdns
+-luci-app-socat
 ```
 
 ## common
@@ -92,6 +98,8 @@ patch
 ``` sh
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+
+sed -i '$a src-git opentopd  https://github.com/sirpdboy/sirpdboy-package' feeds.conf.default
 
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 ```
