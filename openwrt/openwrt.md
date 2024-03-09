@@ -165,3 +165,9 @@ https://github.com/kenzok8/small-package
 
 https://github.com/kiddin9/openwrt-packages
 
+https://github.com/immortalwrt/immortalwrt/discussions/1109
+
+https://blog.xiaofuma.top/archives/FzkXCK33
+
+https://www.bilibili.com/read/cv16071219/
+
