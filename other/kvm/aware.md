@@ -1,0 +1,2 @@
+[KVM 初探](https://mp.weixin.qq.com/s?__biz=MzI1OTY2MzMxOQ==&mid=2247483735&idx=1&sn=e3dc75ae2e8a688b1a091b955a863101&chksm=ea7435efdd03bcf91c97676708688c8876950daace6472c03a055d95d93e9805a2d8b9ae106c&token=1650140382&lang=zh_CN#rd)
+[虚拟化技术总览](https://mp.weixin.qq.com/s?__biz=MzI1OTY2MzMxOQ==&mid=2247483705&idx=1&sn=f34df602949aaa99c3c8fb6b11b9b03a&chksm=ea743581dd03bc97bfff48ac92c7d530c0c84201845554c730967786b01d113475708cdfa5d8&scene=21#wechat_redirect)

@@ -1,0 +1,7 @@
+[Alex Edwards](https://www.alexedwards.net/)
+[Draveness's Blog](https://draveness.me/)
+[joe shaw](https://www.joeshaw.org/)
+[But How Do It Know?](http://buthowdoitknow.com/)
+[Introduction to Computing](https://computingbook.org/)
+[bookstack](https://www.bookstack.cn/)
+[IBM Developer](https://www.ibm.com/developerworks/cn/topics/)

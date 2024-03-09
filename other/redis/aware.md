@@ -1,0 +1,7 @@
+[redis-mindmap](https://github.com/Weiwf/redis-mindmap/blob/master/README.md)
+[理解Redis的内存回收机制](https://mp.weixin.qq.com/s?__biz=MzIwNDUxNTAxNA==&mid=2247483800&idx=1&sn=1098794e9c8568a103c3ab22c6053301&chksm=973fb231a0483b271e252bb03e2cc9186815ede1f108567cf0a65af6b1d002f696fdac976790&token=1237592654&lang=zh_CN#rd)
+[Redis哨兵、复制、集群的设计原理与区别](https://zhuanlan.zhihu.com/p/62947738)
+[Redis系列八：redis主从复制和哨兵](https://www.cnblogs.com/leeSmall/p/8398401.html)
+[redis单点、redis主从、redis哨兵sentinel，redis集群cluster配置搭建与使用](https://www.cnblogs.com/demingblog/p/10295236.html)
+[深入剖析Redis系列(二) - Redis哨兵模式与高可用集群](https://juejin.im/post/5b7d226a6fb9a01a1e01ff64)
+[redis的哨兵模式和集群模式](https://www.jianshu.com/p/d6d2325a5ec7)
