@@ -38,3 +38,4 @@ https://github.com/USBToolBox/kext
 
 https://github.com/corpnewt/USBMap
 
+https://github.com/corpnewt/gibMacOS
