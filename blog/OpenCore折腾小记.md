@@ -97,6 +97,10 @@ https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/post-
 
 EFI文件，安装的时候要放到U盘的EFI分区，挂载的话用diskutil就可以了，装完之后拷贝到系统的EFI分区就可以了。
 
+## 略懂装机，修电脑
+
+## 略懂黑苹果安装
+
 ## 最后的最后
 
 目测macOS应该会在两三个版本之后彻底放弃对x86的支持，最近的版本，可能也在对x86做负优化了。随着macOS放弃对x86的支持，软件开发者对x86的支持也会越来越差，两三年后黑苹果应该就要彻底玩完了，再追两个大版本，用六年是够本了。
