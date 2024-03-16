@@ -93,6 +93,11 @@ patch
 
 ## common
 
+build_dir/target-x86_64_musl/host
+build_dir/target-x86_64_musl/linux-x86_64
+
+feeds/packages/utils/v2dat/Makefile
+
 # feeds
 
 ``` sh
@@ -108,6 +113,14 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 ./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+./scripts/feeds clean
+./scripts/feeds update -a
+# rm -rf feeds/luci/applications/luci-app-mosdns
+# rm -rf feeds/packages/net/{alist,adguardhome,xray*,v2ray*,v2ray*,sing*,smartdns}
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+./scripts/feeds install -a 
 ``` 
 
 # confg
